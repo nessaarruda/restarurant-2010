@@ -5,6 +5,14 @@ class Restaurant
     @name = name
     @opening_time = opening_time
     @dishes = []
+    @closing_time = 0
+  end
+
+  def closing_time(time_lapse)
+    test = time_lapse.to_s.insert(-1,":00")
+    test2 = (opening_time.to_i + test.to_i)
+    test3 = test2.to_s
+    @closing_time = test3.insert(-1, ":00")
   end
 
 
