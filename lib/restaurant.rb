@@ -6,8 +6,7 @@ class Restaurant
     @opening_time = opening_time
     @dishes = []
     @closing_time = 0
-    @sum = sum
-    @time_stamp = time_stamp
+    # @time_stamp = time_stamp
   end
 
   def closing_time(time_lapse)
@@ -33,16 +32,16 @@ class Restaurant
   end
 
   def announce_closing_time(time)
-    @sum = opening_time.to_i + time
+    sum = opening_time.to_i + time
     back_to_string = sum.to_s.insert(-1, ":00")
-    "#{@name} will be closing at #{back_to_string}#{@time_stamp}"
+    "#{@name} will be closing at #{back_to_string}" # needs variable for AM/PM
   end
 
-  def time_stamp
-    if @sum <= 12
-      @time_stamp = "AM"
-    else
-      @time_stamp = "PM"
-  end
-end
+#   def time_stamp
+#     if @sum <= 12
+#       @time_stamp = "AM"
+#     else
+#       @time_stamp = "PM"
+#   end
+# end
 end

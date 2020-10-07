@@ -60,6 +60,7 @@ class RestaurantTest < Minitest::Test
   end
 
   def test_if_list_of_dishes_is_all_caps
+    
     restaurant1 = Restaurant.new('10:00', 'Fuel Cafe')
     restaurant2 = Restaurant.new('16:00', 'Il Poggio')
 
